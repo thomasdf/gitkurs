@@ -41,7 +41,7 @@ void init_local_temp();
  * alpha = 237 / (0.897 * 2700) =~ 0.098
  */
 
-const float MERCURY = 0.0619;
+const float MERCURY = 0.0800;
 const float COPPER = 0.116;
 const float TIN = 0.040;
 const float ALUMINIUM = 0.098;
