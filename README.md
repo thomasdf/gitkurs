@@ -1,1 +1,5 @@
-gitkurs2
+#Gitkurs
+
+##Mål
+
+**Lære git**
