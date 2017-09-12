@@ -269,3 +269,11 @@ void write_temp ( int step ){
     output ( filename, step );
     printf ( "Snapshot at step %d\n", step );
 }
+
+
+
+/* 
+
+PICKLE RICK
+
+*/
