@@ -14,7 +14,7 @@ void external_heat ( int step );
 void write_temp ( int step );
 void print_local_temps(int step);
 void init_temp_material();
-void init_local_temp();
+//void init_local_temp();
 
 /*
  * Physical quantities:
