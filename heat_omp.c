@@ -69,9 +69,8 @@ float
 /* Discretization: 5cm square cells, 2.5ms time intervals */
 const float
     h  = 5e-2,
-    dt = 2.5e-3;
+    dt = 
     
-int n_threads = 1;
 
 
 
