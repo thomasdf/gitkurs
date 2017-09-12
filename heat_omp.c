@@ -71,7 +71,6 @@ const float
     h  = 5e-2,
     dt = 2.5e-3;
     
-int n_threads = 1;
 
 
 
@@ -114,45 +113,6 @@ void external_heat( int step ){
             temperature[step%2][ti(x,y)] = 100.0;
         }
     }
-}
-
-
-    
-
-int main ( int argc, char **argv ){
-    
-    if(argc != 2){
-        printf("Useage: %s <n_threads>\n", argv[0]);
-        exit(-1);
-    }
-    n_threads = atoi(argv[1]);
-        
-    size_t temperature_size =(GRID_SIZE[0]+2*(BORDER))*(GRID_SIZE[1]+2*(BORDER));
-    temperature[0] = calloc(temperature_size, sizeof(float));
-    temperature[1] = calloc(temperature_size, sizeof(float));
-    size_t material_size = (GRID_SIZE[0])*(GRID_SIZE[1]); 
-    material = calloc(material_size, sizeof(float));
-        
-    init_temp_material();
-    
-        
-        // Main integration loop: NSTEPS iterations, impose external heat
-    for( int step=0; step<NSTEPS; step += 1 ){
-        if( step < CUTOFF ){
-            external_heat ( step );
-        }
-        ftcs_solver( step );
-            
-        if((step % SNAPSHOT) == 0){
-            write_temp(step);
-        }
-    }
-        
-    free (temperature[0]);
-    free (temperature[1]);
-    free (material);
-        
-    exit ( EXIT_SUCCESS );
 }
 
 
