@@ -71,7 +71,6 @@ const float
     h  = 5e-2,
     dt = 2.5e-3;
     
-int n_threads = 1;
 
 
 
