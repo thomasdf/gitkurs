@@ -75,7 +75,6 @@ int n_threads = 1337;
 
 
 
-
 /* Indexing functions, returns linear index for x and y coordinates, compensating for the border */
 
 // temperature
